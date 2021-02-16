@@ -1,0 +1,17 @@
+.section-surah a {
+  text-decoration: none;
+}
+
+.section-surah h1 {
+  color: #1c7664;
+}
+
+.section-surah .card:hover {
+  -webkit-box-shadow: #1c7664;
+          box-shadow: #1c7664;
+}
+
+.section-details h2 {
+  color: #1c7664;
+}
+/*# sourceMappingURL=main.css.map */
