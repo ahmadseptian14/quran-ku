@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'SurahController@index')->name('surah');
 Route::get('/surah-details/{number?}', 'DetailController@index')->name('details');
-Route::post('/surah/search', 'SurahController@search')->name('surah.search');
+Route::post('/surah/search', 'SurahController@search')->name('surah-search');
+Route::get('/waktu-sholat', 'SholatController@index')->name('waktu-sholat');
 
 

@@ -22,28 +22,38 @@
                 </div>
             </div>
             <div class="row mb-5">
-                <?php
-                for ($i=0; $i < count($detailSurah['verses']); $i++) {
-                ?>
+                @for ($i = 0; $i < count  ($detailSurah['verses']); $i++)
                 <div class="col-lg-6 col-12">
-                    <audio class="responsive" 
-                    controls="controls"
-                    controlslist="nodownload"
-                    class="mb-5 ml-2 shadow-md rounded-md"
-                    preload="none"
-                    >
-                        <source src="{{$detailSurah['verses'][$i]['audio']['primary']}}" type="audio/mpeg" >
-                      </audio>
+                    <div class="audio-surah">
+                        <audio id="myAudio" class="responsive " 
+                        controls 
+                        controlslist="nodownload"
+                        class="mb-5 ml-2 shadow-md rounded-md"
+                        preload="none">
+                        <source src="{{$detailSurah['verses'][$i]['audio']['primary']}}" type="audio/mpeg"  class="surah">
+                    </audio>
+                    </div>
+                   
                 </div>
                 <div class="col-lg-6 col-12 mb-5">
                     <h2 class="text-right mb-5">{{$detailSurah['verses'][$i]['text']['arab']}}</h2>
                     <p class="textright">{{$detailSurah['verses'][$i]['translation']['id']}}</p>
                     <hr>
                 </div>
-                <?php
-                }
-                ?>
+                @endfor
             </div>
         </div>
    </section>
 @endsection
+
+{{-- @push('addon-script')
+    <script>
+        var i = 0; i < length ($detailSurah['verses']); i++;
+        var audio = document.getElementById("myAudio");
+        audio.onended = function() {
+            audio.src;
+            audio.play(i);
+        });
+    </script>
+@endpush --}}
+

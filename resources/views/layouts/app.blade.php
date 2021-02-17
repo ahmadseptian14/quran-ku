@@ -15,5 +15,6 @@
 
     @include('includes.scripts')
     @include('includes.footer')
+    @stack('addon-script')
 </body>
 </html>

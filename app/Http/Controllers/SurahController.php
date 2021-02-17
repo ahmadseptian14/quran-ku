@@ -16,20 +16,20 @@ class SurahController extends Controller
         ]);
     }
 
-    // public function search(Request $request)
-    // {
+    public function search(Request $request)
+    {
 
-    //     $search = "";
+        $search = "";
 
-    //     $search = $request->search;
+        $search = $request->search;
 
-    //     if ($search !== "") {
-    //         $surahSearch = Http::get('https://api.quran.sutanlab.id/surah',['number']);
-    //     } else {
-    //         $surahSearch = Http::get('https://api.quran.sutanlab.id/surah');
-    //     }
+        if ($search !== "") {
+            $surahSearch = Http::get('https://api.quran.sutanlab.id/surah',['']);
+        } else {
+            $surahSearch = Http::get('https://api.quran.sutanlab.id/surah');
+        }
         
-    //     return view('index', ['items' => $surahSearch['data']]);
-    // }   
+        return view('index', ['items' => $surahSearch['data']]);
+    }   
 
 }

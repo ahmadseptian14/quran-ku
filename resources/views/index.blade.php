@@ -5,6 +5,18 @@
 @section('content')
     <section class="section-surah">
         <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-12 col-12">
+                    <header>
+                        <div class="jumbotron jumbotron-fluid">
+                            <div class="container">
+                              <h1 class="display-4">Alquran Yang Mulia</h1>
+                              <p class="lead">"Bacalah Al Quran sesungguhnya ia akan menjadi syafaat bagi pembacanya di hari kiamat"<br> HR.MUSLIM</p>
+                            </div>
+                          </div>
+                    </header>
+                </div>
+            </div>
            <div class="row mt-5">
                @foreach ($surah as $listSurah)
                 <div class="col-lg-4 col-12 mb-4">
