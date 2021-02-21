@@ -8,7 +8,7 @@
             <div class="row text-center">
                 <div class="col-lg-12 col-12">
                     <header>
-                        <div class="jumbotron jumbotron-fluid">
+                        <div class="jumbotron jumbotron-fluid" data-aos="zoom-in">
                             <div class="container">
                               <h1 class="display-4">Alquran Yang Mulia</h1>
                               <p class="lead">"Bacalah Al Quran sesungguhnya ia akan menjadi syafaat bagi pembacanya di hari kiamat"<br> HR.MUSLIM</p>
@@ -19,7 +19,7 @@
             </div>
            <div class="row mt-5">
                @foreach ($surah as $listSurah)
-                <div class="col-lg-4 col-12 mb-4">
+                <div class=" col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                    <a href="{{route('details', $listSurah['number'])}}" class="text-dark">
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
@@ -36,3 +36,9 @@
         </div>
     </section>
 @endsection
+
+@push('addon-script')
+<script>
+    AOS.init();
+  </script>
+@endpush

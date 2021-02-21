@@ -7,7 +7,7 @@
         <section class="section-sholat">
             <div class="row justify-content-center text-center mt-5">
                 @for ($i = 0; $i < count  ($sholat['datetime']); $i++)
-                <div class="col-lg-10 col-12">
+                <div class="col-lg-10 col-12" data-aos="zoom-in">
                     <div class="jumbotron jumbotron-fluid">
                         <div class="container">
                           <h1 class="display-4">Waktu Sholat</h1>
@@ -24,3 +24,9 @@
         </section>
     </div>
 @endsection
+
+@push('addon-script')
+<script>
+    AOS.init();
+  </script>
+@endpush

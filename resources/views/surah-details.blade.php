@@ -6,7 +6,7 @@
    <section class="section-details">
         <div class="container">
             <div class="row justify-content-center mb-5">
-                <div class="col-lg-12 mt-5">
+                <div class="col-lg-12 mt-5" data-aos="fade-up">
                     <div class="card">
                         <div class="card-header">
                             <h2>  {{$detailSurah['name']['transliteration']['id']}} ({{$detailSurah['name']['translation']['id']}})</h2>
@@ -23,7 +23,7 @@
             </div>
             <div class="row mb-5">
                 @for ($i = 0; $i < count  ($detailSurah['verses']); $i++)
-                <div class="col-lg-6 col-12">
+                <div class="col-lg-6 col-12" data-aos="fade-up" data-aos-delay="100">
                     <div class="audio-surah">
                         <audio id="myAudio" class="responsive " 
                         controls 
@@ -35,7 +35,7 @@
                     </div>
                    
                 </div>
-                <div class="col-lg-6 col-12 mb-5">
+                <div class="col-lg-6 col-12 mb-5" data-aos="fade-up" data-aos-delay="200">
                     <h2 class="text-right mb-5">{{$detailSurah['verses'][$i]['text']['arab']}}</h2>
                     <p class="textright">{{$detailSurah['verses'][$i]['translation']['id']}}</p>
                     <hr>
@@ -46,14 +46,11 @@
    </section>
 @endsection
 
-{{-- @push('addon-script')
-    <script>
-        var i = 0; i < length ($detailSurah['verses']); i++;
-        var audio = document.getElementById("myAudio");
-        audio.onended = function() {
-            audio.src;
-            audio.play(i);
-        });
-    </script>
-@endpush --}}
+
+@push('addon-script')
+<script>
+    AOS.init();
+  </script>
+@endpush
+
 
